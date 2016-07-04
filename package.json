@@ -1,0 +1,5 @@
+{
+	"dependencies" : {
+		"widl-nan": "https://github.com/otcshare/widl-nan.git#develop"
+	}
+}
