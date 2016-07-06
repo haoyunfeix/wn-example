@@ -1,6 +1,6 @@
-var librealsense = require('bindings')('exampleAddon');
+var addon = require('bindings')('exampleAddon');
 
-var x = new librealsense.Meal();
+var x = new addon.Meal();
 
 x.prepare("ramen", 0.5);
 console.log(x.type + ", " + x.size);
