@@ -1,5 +1,11 @@
 {
-	"dependencies" : {
-		"widl-nan": "https://github.com/otcshare/widl-nan.git#develop"
-	}
+  "scripts": {
+    "install":"node scripts/prebuild.js",
+    "postinstall": "node-gyp rebuild"
+  },
+  "dependencies": {
+    "bindings": "^1.2.1",
+    "nan": "^2.3.5",
+    "widl-nan": "https://github.com/otcshare/widl-nan.git"
+  }
 }
