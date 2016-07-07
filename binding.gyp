@@ -5,8 +5,13 @@
       "sources": [
         "addon.cpp",
         "meal.cpp",
-        "generated/nanmeal.h",
-        "generated/nanmeal.cpp"
+        "generated/nan__meal.cpp",
+        "generated/nan__log_severity.cpp",
+        "generated/nan__format.cpp",
+        "generated/nan__distortion.cpp",
+        "generated/nan__option.cpp",
+        "generated/nan__preset.cpp",
+        "generated/nan__stream.cpp"
       ],
       "include_dirs": [
         "<!(node -e \"require('nan')\")",

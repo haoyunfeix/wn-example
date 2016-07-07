@@ -9,7 +9,14 @@
 #include <chrono>
 #include <tuple>
 
-#include "nanmeal.h"
+#include "nan__meal.h"
+
+#include "nan__log_severity.h"
+#include "nan__distortion.h"
+#include "nan__preset.h"
+#include "nan__stream.h"
+#include "nan__format.h"
+#include "nan__option.h"
 
 NAN_METHOD(HelloWorld) {
   printf("Old fashion way to say hello in C\n");
@@ -27,6 +34,13 @@ void initModule(v8::Local<v8::Object> exports) {
   Nan::Export(exports, "returnValueToJS", ReturnValueToJS);
 
   NanMeal::Init(exports);
+
+  Nanlog_severity::Init(exports);
+  Nandistortion::Init(exports);
+  Nanpreset::Init(exports);
+  Nanstream::Init(exports);
+  Nanformat::Init(exports);
+  Nanoption::Init(exports);
 }
 
 NODE_MODULE(exampleAddon, initModule);

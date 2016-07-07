@@ -17,3 +17,4 @@ x.cook("Trump").then(
   }
 );
 console.log("raw meal? " + (x.isRawMeal ? "Yes" : "Not any more"));
+
