@@ -7,6 +7,7 @@ interface Meal {
   readonly attribute boolean isRawMeal;
 
   void prepare(String type, double size);
+  void prepare(String type);
 
   Promise<String> cook(String chefName);
 };

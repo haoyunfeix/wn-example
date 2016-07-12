@@ -22,6 +22,8 @@ class Meal {
   bool get_isRawMeal() const { return raw_meal_; }
 
   void prepare(std::string type, double size);
+  void prepare(std::string type);
+
   // void cook(std::string chefName);
   v8::Handle<v8::Promise> cook(const std::string& chefName, v8::Isolate* isolate);
 

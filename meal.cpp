@@ -15,6 +15,10 @@ void Meal::prepare(std::string type, double size) {
   raw_meal_ = true;
 }
 
+void Meal::prepare(std::string type) {
+  this->prepare(type, 1.0);
+}
+
 v8::Handle<v8::Promise> Meal::cook(const std::string& chefName, v8::Isolate* isolate) {
   using ResolverPersistent = Nan::Persistent<v8::Promise::Resolver>;
 
