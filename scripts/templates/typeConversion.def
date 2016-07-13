@@ -1,0 +1,13 @@
+{{
+
+var ConvertIDLType2JavaScript = function (idlType) {
+  var type = idlType.idlType;
+  if (type === 'String' || type === 'DOMString') {
+    type = 'string';
+  } else if (type === 'double') {
+    type = 'number';
+  }
+  return type;
+};
+
+}}

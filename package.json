@@ -1,11 +1,15 @@
 {
   "scripts": {
-    "install":"node scripts/prebuild.js",
+    "install": "node scripts/prebuild.js",
     "postinstall": "node-gyp rebuild"
   },
   "dependencies": {
     "bindings": "^1.2.1",
+    "dot": "^1.0.3",
+    "fs.promised": "^3.0.0",
+    "mkdirp": "^0.5.1",
     "nan": "^2.3.5",
+    "webidl2": "^2.0.11",
     "widl-nan": "https://github.com/otcshare/widl-nan.git"
   }
 }

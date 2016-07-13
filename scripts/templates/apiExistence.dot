@@ -1,0 +1,43 @@
+"use strict"
+
+const  addon = require('bindings')('exampleAddon');
+const assert = require("assert");
+
+beforeEach(() => {
+});
+
+afterEach(() => {
+});
+
+{{#def.typeConversion}}
+
+describe('{{=it.name}} API Test', function () {
+
+  describe('API Existance', function() {
+    it('addon.{{=it.name}} is a function', function() {
+      assert.equal(typeof addon.{{=it.name}}, 'function');
+    });
+
+    it('new addon.{{=it.name}}() returns an object ', function () {
+      var x = new addon.{{=it.name}}();
+      assert.equal(typeof x, 'object');
+    });
+
+{{~ it.members :p:i}}
+
+{{? p.type === 'attribute'}}
+    it('new addon.{{=it.name}}() object has a {{=ConvertIDLType2JavaScript(p.idlType)}} attribute .{{=p.name}}', function () {
+      var x = new addon.{{=it.name}}();
+      assert.equal(typeof x.{{=p.name}}, '{{=ConvertIDLType2JavaScript(p.idlType)}}');
+    });
+{{?}}
+
+
+{{? p.type === 'operation'}}
+{{?}}
+
+{{~}}
+
+  });
+
+});
