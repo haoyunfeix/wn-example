@@ -19,9 +19,6 @@ describe('Meal API Test', function () {
     it('new addon.Meal() returns an object ', function () {
       var x = new addon.Meal();
       assert.equal(typeof x, 'object');
-      console.log(typeof x.isRawMeal);
-      console.log(typeof x.size);
-      console.log(x);
     });
 
     it('new addon.Meal() object has boolean attribute .isRawMeal', function () {

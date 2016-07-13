@@ -34,6 +34,12 @@ describe('{{=it.name}} API Test', function () {
 
 
 {{? p.type === 'operation'}}
+
+    it('new addon.{{=it.name}}() object has a method .{{=p.name}}({{=p.arguments.length}})', function () {
+      var x = new addon.{{=it.name}}();
+      assert.equal(typeof x.{{=p.name}}, 'function');
+    });
+
 {{?}}
 
 {{~}}
