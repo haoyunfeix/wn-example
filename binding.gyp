@@ -29,8 +29,6 @@
         "-fno-exceptions"
       ],
       "libraries": [
-        "-L/usr/local/lib",
-        "-lrealsense"
       ],
       "xcode_settings": {
         "OTHER_CFLAGS": [
