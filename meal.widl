@@ -1,6 +1,10 @@
 enum MealType { "tartan-steak", "spaghetti", "pasta", "lasagna", "ramen", "sushi" };
 
-[constructor]
+[
+Constructor,
+Constructor(String type),
+Constructor(String type, double size)
+]
 interface Meal {
   attribute String type;
   attribute double size; // in grams
@@ -12,7 +16,7 @@ interface Meal {
   Promise<String> cook(String chefName);
 };
 
-[constructor]
+[Constructor]
 interface Tester {
   void foo(String arg, int times);	
 

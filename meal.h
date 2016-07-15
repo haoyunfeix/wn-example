@@ -11,6 +11,11 @@ class Meal {
 
  public:
   explicit Meal();
+
+  explicit Meal(const std::string& type);
+
+  explicit Meal(const std::string& type, const double& size);
+
   ~Meal();
  
   const std::string::value_type* get_type () const { return type_.c_str(); }

@@ -43,4 +43,4 @@ void initModule(v8::Local<v8::Object> exports) {
   Nanoption::Init(exports);
 }
 
-NODE_MODULE(exampleAddon, initModule);
+NODE_MODULE(exampleAddon1, initModule);

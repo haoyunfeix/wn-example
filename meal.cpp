@@ -6,6 +6,20 @@ Meal::Meal():
     raw_meal_(true) {
 }
 
+Meal::Meal(const std::string& type) :
+    type_(type),
+    size_(1.0),
+    raw_meal_(true) {
+  // TODO: init your members
+}
+
+Meal::Meal(const std::string& type, const double& size) :
+    type_(type),
+    size_(size),
+    raw_meal_(true) {
+  // TODO: init your members
+}
+
 Meal::~Meal() {
 }
  

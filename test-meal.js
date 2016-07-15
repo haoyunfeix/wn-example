@@ -1,6 +1,21 @@
 var addon = require('bindings')('exampleAddon');
+var Meal = addon.Meal;
 
-var x = new addon.Meal();
+console.log("new Meal()");
+var x = new Meal();
+console.log(x);
+console.log("");
+
+console.log("new Meal('pizza')");
+x = new Meal('pizza');
+console.log(x);
+console.log("");
+
+console.log("new Meal('cupcake', 2.0)");
+x = new Meal('cupcake', 2.0);
+console.log(x);
+console.log("");
+
 
 console.log("");
 console.log("Method overload #1: calling prepare('ramen', 0.5);");
