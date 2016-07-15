@@ -6,6 +6,6 @@
   "dependencies": {
     "bindings": "^1.2.1",
     "nan": "^2.3.5",
-    "widl-nan": "https://github.com/otcshare/widl-nan.git"
+    "widl-nan": "git@github.com:otcshare/widl-nan.git"
   }
 }
