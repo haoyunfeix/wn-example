@@ -10,6 +10,6 @@
     "mkdirp": "^0.5.1",
     "nan": "^2.3.5",
     "webidl2": "^2.0.11",
-    "widl-nan": "https://github.com/otcshare/widl-nan.git"
+    "widl-nan": "git@github.com:otcshare/widl-nan.git"
   }
 }
