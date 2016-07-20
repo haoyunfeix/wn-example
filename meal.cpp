@@ -22,7 +22,7 @@ Meal::Meal(const std::string& type, const double& size) :
 
 Meal::~Meal() {
 }
- 
+
 void Meal::prepare(std::string type, double size) {
   type_ = type;
   size_ = size;

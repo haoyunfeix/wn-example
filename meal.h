@@ -18,7 +18,7 @@ class Meal {
 
   ~Meal();
  
-  const std::string::value_type* get_type () const { return type_.c_str(); }
+  const std::string get_type () const { return type_; }
   void set_type (const std::string& new_value) { type_ = new_value; }
 
   double get_size () const { return size_; }
