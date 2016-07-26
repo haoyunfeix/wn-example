@@ -1,7 +1,8 @@
 "use strict"
 
 const  addon = require('bindings')('exampleAddon');
-const assert = require("assert");
+//const assert = require("assert");
+const assert = require("chai").assert;
 
 beforeEach(() => {
 });
@@ -15,12 +16,14 @@ describe('{{=it.name}} API Test', function () {
 
   describe('API Existance', function() {
     it('addon.{{=it.name}} is a function', function() {
-      assert.equal(typeof addon.{{=it.name}}, 'function');
+      //assert.equal(typeof addon.{{=it.name}}, 'function');
+      assert.typeOf(addon.{{=it.name}},'function');
     });
 
     it('new addon.{{=it.name}}() returns an object ', function () {
-      var x = new addon.{{=it.name}}();
-      assert.equal(typeof x, 'object');
+      var x = {{=newString(it.name)}};
+      //assert.equal(typeof x, 'object');
+      assert.typeOf(x,'object');
     });
 
 {{~ it.members :p:i}}
@@ -28,7 +31,8 @@ describe('{{=it.name}} API Test', function () {
 {{? p.type === 'attribute'}}
     it('new addon.{{=it.name}}() object has a {{=ConvertIDLType2JavaScript(p.idlType)}} attribute .{{=p.name}}', function () {
       var x = new addon.{{=it.name}}();
-      assert.equal(typeof x.{{=p.name}}, '{{=ConvertIDLType2JavaScript(p.idlType)}}');
+      //assert.equal(typeof x.{{=p.name}}, '{{=ConvertIDLType2JavaScript(p.idlType)}}');
+      assert.typeOf(x.{{=p.name}},'{{=ConvertIDLType2JavaScript(p.idlType)}}');
     });
 {{?}}
 
@@ -37,7 +41,8 @@ describe('{{=it.name}} API Test', function () {
 
     it('new addon.{{=it.name}}() object has a method .{{=p.name}}({{=p.arguments.length}})', function () {
       var x = new addon.{{=it.name}}();
-      assert.equal(typeof x.{{=p.name}}, 'function');
+      //assert.equal(typeof x.{{=p.name}}, 'function');
+      assert.typeOf(x.{{=p.name}}, 'function');
     });
 
 {{?}}

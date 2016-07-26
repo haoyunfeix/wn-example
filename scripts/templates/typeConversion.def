@@ -1,12 +1,29 @@
 {{
-
+var newMap = {
+    'Meal': 'new addon.meal("adc", 1.0)',
+    'DepthMask': 'new adfd.dadf("adddc", "1bbbb1111")',
+    'MediaError': 'new 123.mediaerror.123("123media", "123321")'
+};
+var newString = function (str) {
+    return newMap[str];
+};
 var ConvertIDLType2JavaScript = function (idlType) {
   var type = idlType.idlType;
-  if (type === 'String' || type === 'DOMString') {
+  if (type === 'String' || type === 'DOMString' || type === 'ByteString' || type === 'USVString') {
     type = 'string';
-  } else if (type === 'double') {
-    type = 'number';
-  }
+  } 
+    else if (type === 'void') {
+      type = 'undefined';
+      }
+    else if (type === 'boolean') {
+      type = 'boolean';
+      }
+    else if (type === 'byte' || type === 'octet' || type === 'unsigned short' || type === 'long' || type === 'unsigned long' || type === 'long long' || type === 'DOMTimeStamp' || type === 'float' || type === 'double' || type === 'unrestricted float' || type === 'unrestricted double') {
+      type = 'number';
+      }
+    else if (type === 'object') {
+      type = 'function';
+      }
   return type;
 };
 
